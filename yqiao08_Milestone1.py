@@ -573,7 +573,7 @@ def game_starts(mini):
             else:
                 print('Invalid operation. ')
                 continue
-        if(game.checkmate(turnmod[turn % 2]) == 1): #Check if there is a checkmate
+        if(game.checkmate(turnmod[(turn + 1) % 2]) == 1): #Check if there is a checkmate
             print('>>>>>>>>>' + moving_player[turn % 2] + ' Wins! ')
             break
     print('####### Game Over #######')
