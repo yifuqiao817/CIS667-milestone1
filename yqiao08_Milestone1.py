@@ -347,7 +347,7 @@ class chess(object): #Class definition for each piece
                     c += cdir
                     if((r == goalr) or (c == goalc)):
                         break
-                    trace.append((r,c))
+                    trace.append((int(r),int(c)))
 
         elif (self.type == 'Knight'): #Knight
             rmove = abs(goalr - fromr)
@@ -389,7 +389,7 @@ class chess(object): #Class definition for each piece
                     c += cdir
                     if ((r == goalr) or (c == goalc)):
                         break
-                    trace.append((r, c))
+                    trace.append((int(r), int(c)))
 
         if(cando == 1): #It is operable
             self.curr_pos = dest
@@ -449,7 +449,7 @@ class chess(object): #Class definition for each piece
                     c += cdir
                     if((r == goalr) or (c == goalc)):
                         break
-                    trace.append((r,c))
+                    trace.append((int(r),int(c)))
 
         elif (self.type == 'Knight'):
             rmove = abs(goalr - fromr)
@@ -491,7 +491,7 @@ class chess(object): #Class definition for each piece
                     c += cdir
                     if ((r == goalr) or (c == goalc)):
                         break
-                    trace.append((r, c))
+                    trace.append((int(r), int(c)))
         return cando,trace
 
 def posit_trans(cell): #String position to numeric position
@@ -590,4 +590,3 @@ if __name__ == "__main__":
         else:
             print('Invalid operation. ')
             continue
-
